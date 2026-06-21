@@ -5,7 +5,7 @@ on: [push]
 jobs:
   job2:
     runs-on: ubuntu-latest
-    neds: job1
+    needs: job1
     steps:
       - name: step B
         run: echo World!
