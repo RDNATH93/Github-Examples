@@ -21,4 +21,4 @@ echo -e "🌐 \e[1mPublic IP:\e[0m  $PUBLIC_IP"
 
 # Weather Information (uses wttr.in format)
 echo -e "\n🌤️  \e[1mLocal Weather Snapshot:\e[0m"
-curl -s "https://wttr.in" | head -n 7
+curl -s "https://wttr.in"
