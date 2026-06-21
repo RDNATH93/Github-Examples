@@ -1,0 +1,16 @@
+name: Bash Scripts Runner
+
+on: [push]
+
+jobs:
+  run-bash-scripts:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
+      steps:
+        - name: checkout the repository to the runner
+          uses: actions/checkout@v3
+        - name: Run a script
+          run: |
+            chmod +x ./myscript.sh
