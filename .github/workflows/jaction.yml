@@ -1,0 +1,16 @@
+name: Javascript Action
+
+on: [push]
+
+jobs:
+  run-javascript-action:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: RDNATH93/jaction@v1.1
+        with:
+          who-to-greet: RD_NATH
+      # Use the output from the `hello` step
+      - name: get the time output
+        run: echo The time is ${{ steps.hello.outputs.time }}
