@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-javascript-action:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - name: Hello world action step
         id: hello
