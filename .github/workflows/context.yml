@@ -9,5 +9,19 @@ jobs:
       - name: my-context
         run: |
           echo Hello $MY_ACTOR
+          echo My_GITHUB $MY_GITHUB
+          echo MY_ACITON $MY_ACITON
+          echo MY_ACTION_PATH $MY_ACTION_PATH
+          echo MY_ACTION_REF $MY_ACTION_REF
+          echo MY_ACTION_REPOSITORY $MY_ACTION_REPOSITORY
+          echo MY_ACTION_STATUS $MY_ACTION_STATUS
+          echo MY_URL $MY_URL
         env:
-         MY_ACTOR: ${{ github.actor }} 
+         MY_ACTOR: ${{ github.actor }}
+         MY_GITHUB: ${{ github }} 
+         MY_ACITON: ${{ github.action }}
+         MY_ACTION_PATH: ${{ github.action_path}}
+         MY_ACTION_REF: ${{ github.action_ref }}
+         MY_ACTION_REPOSITORY: ${{ github.action_repository }}
+         MY_ACTION_STATUS: ${{ github.action_status }}
+         MY_URL: ${{ github.api_url }}
